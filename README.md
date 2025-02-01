@@ -15,5 +15,5 @@ To workaround API request limits, we should have a worker to re-request feed upd
 
 ### Implementation details
 
-Template geneneration should use jinja2-based templates.
-This tool should be reliant on the GTFS protobuf bindings.
+Use Go + realtime protobuf bindings
+

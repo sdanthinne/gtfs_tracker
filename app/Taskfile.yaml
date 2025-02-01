@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -v -o build/
+  run:
+    deps: [build]
+    cmds:
+      - ./build/gtfs_tracker
+  clean:
+    cmds:
+      - rm ./build/gtfs_tracker
+
+  test:
+    cmds:
+      - go test -v sdanthinne/gtfs_tracker/internal
