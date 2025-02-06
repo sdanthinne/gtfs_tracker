@@ -1,12 +1,12 @@
 package main
-import (
-    "log"
 
-    "sdanthinne/gtfs_tracker/cmd"
+import (
+	"log"
+	"sdanthinne/gtfs_tracker/cmd"
+	"os"
 )
 
 func main() {
-    log.SetFlags(0)
-    log.Printf(cli.Dummy())
-    
+	log.SetFlags(0)
+	cli.Run(os.Args)
 }
