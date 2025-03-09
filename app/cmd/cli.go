@@ -1,25 +1,24 @@
 package cmd
 
 import (
-    "log"
-    "sdanthinne/gtfs_tracker/internal/server"
+	"log"
+	"sdanthinne/gtfs_tracker/internal/server"
 )
 
-func validate_args(args [] string) bool {
+func validate_args(args []string) bool {
 	if len(args) > 1 {
 		return false
 	}
 	return true
 }
 
-func Run(args [] string) int {
+func Run(args []string) int {
 	if !validate_args(args) {
 		return -1
 	}
 	log.Printf("Initializing...")
-	server := Create_server()
+	local_server := server.Create_server()
 
-	Start_server(server)
+	server.Start_server(local_server)
 	return 0
 }
-

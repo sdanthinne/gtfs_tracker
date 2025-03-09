@@ -1,19 +1,19 @@
 package server
 
 import (
-    "net/http"
-    "log"
+	"log"
+	"net/http"
 )
 
-func Create_server() Server {
-    log.Printf("Creating server")
-    s := &http.Server{
-    	Addr: "8000",
-    }
-    return s
+func Create_server() *http.Server {
+	log.Printf("Creating server")
+	s := &http.Server{
+		Addr: "8000",
+	}
+	return s
 }
 
-go func Start_server( s Server ) {
-    log.Printf("Starting server")
-    s.ListenAndServe()
+func Start_server(s *http.Server) {
+	log.Printf("Starting server")
+	s.ListenAndServe()
 }
