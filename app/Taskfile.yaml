@@ -14,4 +14,4 @@ tasks:
 
   test:
     cmds:
-      - go test -v sdanthinne/gtfs_tracker/internal
+      - go test -v sdanthinne/gtfs_tracker/test
